@@ -30,4 +30,8 @@ app.get('/profile/:id', profileGet(db));
 app.put('/image', image(db));
 app.post('/imageurl', callClarifaiApi() );
 
-app.listen(3000, () => console.log("app is running on port 3000"));
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port);
