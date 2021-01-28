@@ -1,21 +1,16 @@
-const mongoose = require('mongoose');
-const AutoIncrement = require('mongoose-sequence')(mongoose);
+const knex = require('knex');
 
-const Schema = mongoose.Schema;
-
-// create userInformationSchema
-const userSchema = Schema({
-	_id:Number,
-  name: String,
-  email: String,
-  password: String,
-  entries: Number,
-  joined: String
-}, {_id: false });
-userSchema.plugin(AutoIncrement);
-
-const User = mongoose.model('User', userSchema);
+//database connections
+const db = knex({
+  client: 'pg',
+  connection: {
+    host: '127.0.0.1',
+    user: 'postgres',
+    password: 'khankirpola06',
+    database: 'smartBrainDB'
+  }
+}); 
 
 module.exports = {
-  User
+  db
 }
