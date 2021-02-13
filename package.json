@@ -1,30 +1,27 @@
 {
-  "name": "smartBrainApi",
+  "name": "node",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "bcrypt-nodejs": "^0.0.3",
-    "body-parser": "^1.19.0",
-    "clarifai": "^2.9.1",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "knex": "^0.21.16",
-    "mongoose": "^5.11.13",
-    "mongoose-sequence": "^5.3.1",
-    "nodemon": "^2.0.6",
-    "pg": "^8.5.1",
-    "uuid": "^8.3.2"
-  },
-  "devDependencies": {},
+  "main": "script.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon -L app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "engines": {
-    "node":"12.19.0"
-  }
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "clarifai": "^2.9.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.6",
+    "morgan": "^1.10.0",
+    "pg": "^8.3.3",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "description": ""
 }
